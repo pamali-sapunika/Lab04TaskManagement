@@ -7,9 +7,18 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FEFEFD"
         android:orientation="vertical"
-        tools:context=".NewNoteFragment"
-        android:padding="12dp">
+        android:padding="12dp"
+        tools:context=".NewNoteFragment">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="399dp"
+            android:layout_height="251dp"
+            android:layout_below="@id/prioritySubTopic"
+            android:layout_marginTop="43dp"
+            app:srcCompat="@drawable/flowerbg" />
 
         <TextView
             android:id="@+id/addNoteHeading"
@@ -27,27 +36,91 @@
             android:id="@+id/addNoteTitle"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="Enter the title"
-            android:padding="12dp"
-            android:textSize="20sp"
             android:layout_below="@id/addNoteHeading"
-            android:background="@drawable/pink_border"
             android:layout_marginTop="16dp"
+            android:background="@drawable/pink_border"
+            android:fontFamily="@font/poppins"
+            android:hint="Enter the title"
             android:maxLines="1"
-            android:fontFamily="@font/poppins"/>
+            android:padding="12dp"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/addNoteDesc"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Enter the description"
-            android:gravity="top"
-            android:padding="12dp"
-            android:textSize="18sp"
-            android:fontFamily="@font/poppins"
-            android:background="@drawable/pink_border"
+            android:layout_width="386dp"
+            android:layout_height="154dp"
             android:layout_below="@id/addNoteTitle"
-            android:layout_marginTop="12dp" />
+            android:layout_marginTop="12dp"
+            android:background="@drawable/pink_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="top"
+            android:hint="Enter the description"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/addNoteTime"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addNoteDesc"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/pink_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="top"
+            android:hint="Enter time period"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/prioritySubTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addNoteTime"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
+            android:padding="4dp"
+            android:text="Priority"
+            android:textColor="@color/pink"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="388dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prioritySubTopic"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/priority1"
+                android:layout_width="119dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/red"
+                android:text="High Priority"
+                android:textColor="@color/pink"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/priority2"
+                android:layout_width="119dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/red"
+                android:text="Normal"
+                android:textColor="@color/pink"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/priority3"
+                android:layout_width="119dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/red"
+                android:text="Simple"
+                android:textColor="@color/pink"
+                android:textSize="16sp" />
+
+        </LinearLayout>
 
     </RelativeLayout>
 </layout>

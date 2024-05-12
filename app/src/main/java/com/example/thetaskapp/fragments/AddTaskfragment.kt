@@ -51,6 +51,7 @@ class AddTaskfragment : Fragment(R.layout.fragment_add_taskfragment),MenuProvide
     private fun saveTask(view: View){
         val taskTitle = binding.addNoteTitle.text.toString().trim()
         val taskDesc  = binding.addNoteDesc.text.toString().trim()
+//        val taskTime  = binding.addNoteTime.text.toString().trim()
 
         if (taskTitle.isNotEmpty()){
             val task = Task(0,taskTitle,taskDesc)

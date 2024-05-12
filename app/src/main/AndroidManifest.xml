@@ -13,6 +13,12 @@
         android:theme="@style/Theme.TheTaskApp"
         tools:targetApi="31">
         <activity
+            android:name=".LaunchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewmodel.LaunchActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -23,8 +29,9 @@
 
             <meta-data
                 android:name="android.app.lib_name"
-                android:value=""/>
+                android:value="" />
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

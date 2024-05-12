@@ -19,6 +19,7 @@ class TaskAdapter :RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
             return oldItem.id == newItem.id &&
                     oldItem.taskDesc ==newItem.taskDesc &&
                     oldItem.taskTitle == newItem.taskTitle
+//                    oldItem.taskTime == newItem.taskTime
 
         }
 
@@ -42,6 +43,7 @@ class TaskAdapter :RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
        val currentTask = differ.currentList[position]
         holder.itemBinding.noteTitle.text = currentTask.taskTitle
         holder.itemBinding.noteDesc.text = currentTask.taskDesc
+//        holder.itemBinding.noteTask.text = currentTask.taskDesc
 
         holder.itemView.setOnClickListener{
             val direction = HomeFragmentDirections.actionHomeFragmentToEditTaskFragment(currentTask)

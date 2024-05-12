@@ -2,6 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="pink">#F88379</color>
+    <color name="pink">#ff6b81</color>
     <color name="red">#c13b34</color>
+    <color name="newyellow">#fdcb6e</color>
+    <color name="newpink">#ff6b81</color>
+    <color name="newash">#f4f4f4</color>
+    <color name="newDarkBlue">#2f3542</color>
+    <color name="newLightPink">#f4e3e3</color>
 </resources>

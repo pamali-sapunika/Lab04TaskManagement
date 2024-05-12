@@ -11,6 +11,78 @@
         android:padding="12dp"
         tools:context=".UpdateNoteFragment">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="234dp"
+            android:layout_below="@id/prioritySubTopicedit"
+            android:layout_marginTop="70dp"
+            app:srcCompat="@drawable/flowerbg3" />
+
+        <TextView
+            android:id="@+id/prioritySubTopicedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editNoteTime"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
+            android:padding="4dp"
+            android:text="Priority"
+            android:textColor="@color/pink"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="388dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prioritySubTopicedit"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/priority1edit"
+                android:layout_width="119dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/red"
+                android:text="High Priority"
+                android:textColor="@color/pink"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/priority2edit"
+                android:layout_width="119dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/red"
+                android:text="Normal"
+                android:textColor="@color/pink"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/priority3edit"
+                android:layout_width="119dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/red"
+                android:text="Simple"
+                android:textColor="@color/pink"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editNoteTime"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editNoteDesc"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/pink_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="top"
+            android:hint="Enter time period"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
         <TextView
             android:id="@+id/editNoteHeading"
             android:layout_width="wrap_content"
@@ -19,9 +91,9 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins"
             android:text="Edit Note."
-            android:textStyle="bold"
-            android:textColor="@color/red"
-            android:textSize="24sp" />
+            android:textColor="@color/newpink"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/editNoteTitle"
@@ -38,16 +110,16 @@
 
         <EditText
             android:id="@+id/editNoteDesc"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Enter the description"
-            android:gravity="top"
-            android:padding="12dp"
-            android:textSize="18sp"
-            android:fontFamily="@font/poppins"
-            android:background="@drawable/pink_border"
+            android:layout_width="386dp"
+            android:layout_height="156dp"
             android:layout_below="@id/editNoteTitle"
-            android:layout_marginTop="12dp" />
+            android:layout_marginTop="12dp"
+            android:background="@drawable/pink_border"
+            android:fontFamily="@font/poppins"
+            android:gravity="top"
+            android:hint="Enter the description"
+            android:padding="12dp"
+            android:textSize="18sp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/editNoteFab"
