@@ -22,6 +22,7 @@ import com.example.thetaskapp.viewmodel.TaskViewModel
 
 class AddTaskfragment : Fragment(R.layout.fragment_add_taskfragment),MenuProvider {
 
+    //view binding
     private var addTaskfragmentBinding: FragmentAddTaskfragmentBinding? = null
     private val binding get() = addTaskfragmentBinding!!
 
@@ -48,13 +49,13 @@ class AddTaskfragment : Fragment(R.layout.fragment_add_taskfragment),MenuProvide
         addTaskView = view
     }
 
-    private fun saveTask(view: View){
+    private fun saveTask(view: View){  //retrive title and description form the table
         val taskTitle = binding.addNoteTitle.text.toString().trim()
         val taskDesc  = binding.addNoteDesc.text.toString().trim()
-//        val taskTime  = binding.addNoteTime.text.toString().trim()
+//        val taskTime = binding.addNoteTime.text.toString().trim()
 
         if (taskTitle.isNotEmpty()){
-            val task = Task(0,taskTitle,taskDesc)
+            val task = Task(0,taskTitle,taskDesc)  //new Task object
             taskViewModel.addTask(task)
 
             Toast.makeText(addTaskView.context,"Task Saved",Toast.LENGTH_SHORT).show()

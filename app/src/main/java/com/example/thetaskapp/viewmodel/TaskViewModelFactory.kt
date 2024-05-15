@@ -7,7 +7,8 @@ import com.example.thetaskapp.repository.TaskRepository
 
 class TaskViewModelFactory(val app:Application,private val taskRepository: TaskRepository):ViewModelProvider.Factory {
 
-    override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return TaskViewModel(app,taskRepository)as T
+    //instantiating ViewModel classes.
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {  //modelclass -> parameter
+        return TaskViewModel(app,taskRepository)as T  //passes Application and Repositery instances
     }
 }

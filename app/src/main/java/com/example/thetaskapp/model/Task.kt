@@ -12,6 +12,6 @@ data class Task(
     val id:Int,
     val taskTitle:String,
     val taskDesc:String,
-//    val taskTime: String,
+//    val taskTime: String
 //    val taskPriority: String
 ):Parcelable

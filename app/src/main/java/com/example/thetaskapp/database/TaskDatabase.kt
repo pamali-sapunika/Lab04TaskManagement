@@ -7,17 +7,19 @@ import androidx.room.RoomDatabase
 import com.example.thetaskapp.model.Task
 import java.util.concurrent.locks.Lock
 
+
 @Database(entities = [Task::class], version = 1)
+//Abstract base class for Room Database
 abstract class TaskDatabase:RoomDatabase() {
 
-    abstract fun getTaskDao():TaskDao
+    abstract fun getTaskDao():TaskDao //Allowing access to database operations
 
-    companion object{
+    companion object{ //Method for creating an instance
         @Volatile
-        private var instance:TaskDatabase? = null
+        private var instance:TaskDatabase? = null //Singleton pattern
         private val Lock = Any()
 
-        operator fun invoke(context: Context) = instance ?:
+        operator fun invoke(context: Context) = instance ?: //DataBase instance
         synchronized(Lock){
             instance ?:
             createDatabase(context).also{

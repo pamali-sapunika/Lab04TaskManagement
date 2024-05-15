@@ -22,5 +22,5 @@ class MainActivity : AppCompatActivity() {
         val taskRepository = TaskRepository(TaskDatabase(this))
         val viewModelProviderFactory = TaskViewModelFactory(application,taskRepository)
         taskViewModel = ViewModelProvider(this,viewModelProviderFactory)[TaskViewModel::class.java]
-    }
+    }   //managing viewModels and maintaining Home page
 }

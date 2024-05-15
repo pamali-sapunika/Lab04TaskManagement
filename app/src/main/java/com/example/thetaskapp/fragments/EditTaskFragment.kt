@@ -56,7 +56,7 @@ class EditTaskFragment : Fragment(R.layout.fragment_edit_task),MenuProvider {
         binding.editNoteFab.setOnClickListener{
             val taskTitle = binding.editNoteTitle.text.toString().trim()
             val taskDesc = binding.editNoteDesc.text.toString().trim()
-//            val taskTime= binding.editNoteTime.text.toString().trim()
+//            val taskTime = binding.editNoteTime.text.toString().trim()
 
             if(taskTitle.isNotEmpty()){
                 val task = Task(currentTask.id,taskTitle,taskDesc)

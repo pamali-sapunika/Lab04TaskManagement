@@ -9,8 +9,9 @@ import androidx.room.Query
 import androidx.room.Update
 import com.example.thetaskapp.model.Task
 
+//Data Access Object with the Room Database
 @Dao
-interface TaskDao {
+interface TaskDao { //CRUD
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTask(task: Task)
 
@@ -20,6 +21,7 @@ interface TaskDao {
     @Delete
     suspend fun deleteTask(task: Task)
 
+    //define custom queries to define
     @Query("SELECT*FROM TASKS ORDER BY id DESC ")
     fun getAllTasks():LiveData<List<Task>>
 
